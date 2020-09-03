@@ -12,6 +12,9 @@ import { from } from 'rxjs';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
+
+  public uiInvalidCredential = false;
+  
   public fbFormGroup = this.fb.group({
     username : ['', Validators.required],
     password : ['', Validators.required],
@@ -27,7 +30,8 @@ export class RegisterComponent implements OnInit {
     private http : HttpClient) {}
 
   ngOnInit(): void {}
-   async register(){
+  
+  async register(){
      const data = this.fbFormGroup.value;
      const url = "http://localhost:3000/adduser";
 

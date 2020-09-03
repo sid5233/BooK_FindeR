@@ -8,7 +8,16 @@ import { Router } from '@angular/router';
 })
 export class HomepageComponent implements OnInit {
 
+  linklist = [
+    { title: 'homepage', link: 'homepage' },
+    { title: 'bookclub', link: '/homepage/bookclub' },
+    { title: "about-us", link: '/homepage/aboutus' },
+  ];
+  
   constructor(private router: Router) { }
+  gotopage(page) {
+    this.router.navigate([page]);
+  }
 
   ngOnInit(): void {
     if(!sessionStorage.getItem('sid')){
@@ -16,4 +25,11 @@ export class HomepageComponent implements OnInit {
     }
   }
 
+  processLogout(){
+    sessionStorage.removeItem('sid');
+    this.router.navigate(['login'])
+  }
+
 }
+
+ 

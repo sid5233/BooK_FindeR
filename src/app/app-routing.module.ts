@@ -10,14 +10,20 @@ import { SearchComponent } from './search/search.component';
 import { Error404Component } from './error404/error404.component';
 
 const routes: Routes = [
-  {path:'login', component:LoginComponent},
-  {path:'register',component:RegisterComponent},
-  {path:'aboutus',component:AboutusComponent},
-  {path:'bookclub',component:BookclubComponent},
-  {path:'homepage',component:HomepageComponent},
-  {path:'search',component:SearchComponent},
-  {path:'', redirectTo:'/login',pathMatch:'full'},
-  {path:'**',component:Error404Component},
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
+
+  {
+    path: 'homepage', component: HomepageComponent,
+    children: [
+      { path: 'search', component: SearchComponent },
+      { path: 'aboutus', component: AboutusComponent },
+      { path: 'bookclub', component: BookclubComponent }
+    ],
+  },
+
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: '**', component: Error404Component },
 ];
 
 @NgModule({
