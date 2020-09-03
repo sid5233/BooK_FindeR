@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
   public faBookReader = faBookReader;
+  public uiInvalidCredintial = false;
 
   public fbFormGroup = this.fb.group({
       username: ['', Validators.required],
@@ -24,9 +25,12 @@ export class LoginComponent implements OnInit {
   login() {
     const data = this.fbFormGroup.value;
     if (data.username === 'angular' && data.password === 'admin'){
-    this.router.navigate(['register']);
+      sessionStorage.setItem('sid','true');
+      this.router.navigate(['homepage']);
     }
-    else { }
+    else { 
+      this.uiInvalidCredintial = true; 
+    }
   }
 
 }
