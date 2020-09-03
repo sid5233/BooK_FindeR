@@ -1,0 +1,48 @@
+<div class="container-fluid bg">
+    <div class="row image"  >
+        <!-- Left Block -->
+        <div
+            class="col d-flex flex-column justify-content-center align-items-center left" > 
+            <div>
+                <img src="../assets/books.svg" alt=""
+                    srcset=""
+                    style="height: 100px; width: 100px;">
+            </div>
+            <div class="h1 ">bookFinder</div>
+            <div class="h3">
+                The World Belong Those Who Reads...!
+            </div>
+        </div>
+
+
+        <!-- Right Block-->
+      
+        <div
+            class="col d-flex flex-column justify-content-center align-items-center" [formGroup]='fbFormGroup'>
+            <div
+                class=" col d-flex flex-column justify-content-center align-items-center border" >
+                <div class="h4">ACCOUNT LOGIN</div>
+                <div>
+                    <input type="text"
+                        placeholder="Enter Username"
+                        class="form-control"
+                        formControlName="username" />
+                </div>
+
+                <div class="mt-1">
+                    <input type="password"
+                        placeholder="Enter Password"
+                        class="form-control"
+                        formControlName="password" />
+                </div> 
+ 
+                <button
+                    class="btn btn-sm btn-warning mt-2 mb-2 " [disabled]="!fbFormGroup.valid">
+                    Login Here
+                </button>
+                <a routerLink="/register">Register Here</a>
+             </div>
+        </div>
+    </div>
+
+ 

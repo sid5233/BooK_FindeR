@@ -1,0 +1,21 @@
+body,
+html,
+.left {
+  height: 100vh;
+  margin: 0px;
+}
+
+.bg {
+  /* The image used */
+  background-image: url(../../assets/Liquid-Cheese.svg);
+  /* Full height */
+  height: 100vh;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+border{
+    height: 200px;
+}
