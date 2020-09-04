@@ -56,7 +56,7 @@ export class LoginComponent implements OnInit {
     const url = "http://localhost:3000/adduser";
 
     await this.http.post(url,data).toPromise();
-    this.router.navigate(['hoempage']);
+    this.router.navigate(['homepage']);
   }
 }
 

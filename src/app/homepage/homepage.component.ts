@@ -24,11 +24,7 @@ export class HomepageComponent implements OnInit {
       this.router.navigate(['login']);
     }
   }
-
-  processLogout(){
-    sessionStorage.removeItem('sid');
-    this.router.navigate(['login'])
-  }
+ 
 
 }
 
