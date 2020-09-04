@@ -13,7 +13,7 @@ import { HttpClient  } from '@angular/common/http';
 })
 export class LoginComponent implements OnInit {
   public faBookReader = faBookReader;
-  public uiInvalidCredintial = false;
+  public uiInvalidCredential = false;
 
   public fbFormGroup = this.fb.group({
       username: ['', Validators.required],
@@ -25,6 +25,9 @@ export class LoginComponent implements OnInit {
   public fbFormGroup1 = this.fb.group({
     username: ['', Validators.required],
     password: ['',Validators.required],
+    email : [''],
+    mobile : [''],
+
 });
 
   constructor( private fb : FormBuilder,private router : Router ,
@@ -33,18 +36,22 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  login() {
+  async login() {
     const data = this.fbFormGroup1.value;
-    if (data.username === 'angular' && data.password === 'admin'){
-      sessionStorage.setItem('sid','true');
+
+    // ajax call
+    const url = 'http://localhost:3000/auth-user';
+    const result: any = await this.http.post(url, data).toPromise();
+    if (result.opr) {
+      sessionStorage.setItem('sid', 'true');
       this.router.navigate(['homepage']);
-    }
-    else { 
-   
+    } else {
+      this.uiInvalidCredential = true;
     }
   }
 
   async register(){
+    console.log("adfa")
     const data = this.fbFormGroup.value;
     const url = "http://localhost:3000/adduser";
 
