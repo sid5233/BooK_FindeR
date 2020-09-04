@@ -13,15 +13,9 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'search', component: SearchComponent },
-
-  {
-    path: 'homepage', component: HomepageComponent,
-    children: [
-      { path: 'aboutus', component: AboutusComponent },
-      { path: 'bookclub', component: BookclubComponent }
-    ],
-  },
-
+  { path: 'bookclub', component: BookclubComponent },
+    {path: 'homepage', component: HomepageComponent},
+    { path: 'aboutus', component: AboutusComponent },
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: '**', component: Error404Component },
 ];

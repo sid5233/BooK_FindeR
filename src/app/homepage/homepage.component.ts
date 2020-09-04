@@ -10,8 +10,8 @@ export class HomepageComponent implements OnInit {
 
   linklist = [
     { title: 'homepage', link: 'homepage' },
-    { title: 'bookclub', link: '/homepage/bookclub' },
-    { title: "about-us", link: '/homepage/aboutus' },
+    { title: 'bookclub', link: '/bookclub' },
+    { title: "about-us", link: 'aboutus' },
   ];
   
   constructor(private router: Router) { }
