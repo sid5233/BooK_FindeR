@@ -50,13 +50,12 @@ export class LoginComponent implements OnInit {
     }
   }
 
-  async register(){
-    console.log("adfa")
+   async register(){
     const data = this.fbFormGroup.value;
     const url = "http://localhost:3000/adduser";
 
     await this.http.post(url,data).toPromise();
-    this.router.navigate(['homepage']);
+    this.router.navigate(['hoempage']);
   }
-
 }
+
