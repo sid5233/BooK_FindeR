@@ -13,6 +13,7 @@ import { SearchComponent } from './search/search.component';
 import { BookclubComponent } from './bookclub/bookclub.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { Error404Component } from './error404/error404.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { Error404Component } from './error404/error404.component';
     SearchComponent,
     BookclubComponent,
     AboutusComponent,
-    Error404Component
+    Error404Component,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
