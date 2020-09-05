@@ -14,6 +14,7 @@ export class JSONPlaceholderService {
   getData() : Observable <any> {
     const url = "https://www.googleapis.com/books/v1/volumes?q=harry"
     return this.http.get<any>(url)
+    console.log(this.getData[0].volumeInfo.title.value)
   }
 }
 

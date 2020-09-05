@@ -30,6 +30,8 @@ export class SearchComponent implements OnInit {
       this.JSONplaceholder.getData().subscribe((data) => {
         console.log(data);
         this.data = data
+        console.log(data[0].volumeInfo.title)
+      
       })
   }
 

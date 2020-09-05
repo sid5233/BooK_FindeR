@@ -1,47 +1,24 @@
-#search{
-	width:300px;
-	height:150px;
-	margin:auto;
-	margin-top:20px;
-	padding:15px;
+/* Styles for wrapping the search box */
+
+.main {
+    width: 50%;
+    margin: 50px auto;
 }
-button{
-	position:relative;
-	left:50px;
+
+/* Bootstrap 4 text input with search icon */
+
+.has-search .form-control {
+    padding-left: 2.375rem;
 }
-.aligning{
-	margin-left:700px;
-	margin-top:20px;
-}
-#imagebutton{
-	position:relative;
-	left:-10px;
-	top:-8px;
-	margin-bottom:15px;
-}
-#result{
-	margin-top:50px;
-}#search{
-	width:300px;
-	height:150px;
-	margin:auto;
-	margin-top:20px;
-	padding:15px;
-}
-button{
-	position:relative;
-	left:50px;
-}
-.aligning{
-	margin-left:700px;
-	margin-top:20px;
-}
-#imagebutton{
-	position:relative;
-	left:-10px;
-	top:-8px;
-	margin-bottom:15px;
-}
-#result{
-	margin-top:50px;
+
+.has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
 }
